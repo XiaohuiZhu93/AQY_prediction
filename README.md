@@ -1,5 +1,5 @@
 # AQY_prediction
-This repository contains model data files and MATLAB scripts to predict the Apparent Quantum Yield matrix (AQY-M) of Chromophoric Dissolved Organic Matter (CDOM) photobleaching. The files cinlude the model parameters and principal-component variables needed for the model, as well as MATLAB scripts, and an example usage. The details of the model and information about the variability of the CDOM photobleaching AQY-M in natural waters are described in Zhu et. al. 2023 (10.1016/j.scitotenv.2023.168670).
+This repository contains model data files and MATLAB scripts to predict the Apparent Quantum Yield matrix (AQY-M) of Chromophoric Dissolved Organic Matter (CDOM) photobleaching. The files include the model parameters and principal-component variables needed for the model, MATLAB scripts, and an example file containing input variables from 36 samples (to predict 36 corresponding AQY-M). The details of the model and information about the variability of the CDOM photobleaching AQY-M in natural waters are presented in Zhu et. al. 2023 (10.1016/j.scitotenv.2023.168670).
 
 Data Files
 1. PCA_PCs.mat:
