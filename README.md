@@ -1,5 +1,5 @@
 # AQY_prediction
-This repository contains model data files and MATLAB code files used for predicting the Apparent Quantum Yield (AQY) of Chromophoric Dissolved Organic Matter (CDOM) photobleaching. The main components include data files containing model parameters and principal components, and MATLAB script files for prediction and example usage. For more technology details of this model and the global diversity of CDOM photobleaching, please check our paper Zhu et. al. 2023 (10.1016/j.scitotenv.2023.168670).
+This repository contains model data files and MATLAB scripts to predict the Apparent Quantum Yield matrix (AQY-M) of Chromophoric Dissolved Organic Matter (CDOM) photobleaching. The files cinlude the model parameters and principal-component variables needed for the model, as well as MATLAB scripts, and an example usage. The details of the model and information about the variability of the CDOM photobleaching AQY-M in natural waters are described in Zhu et. al. 2023 (10.1016/j.scitotenv.2023.168670).
 
 Data Files
 1. PCA_PCs.mat:
@@ -10,22 +10,22 @@ Data Files
      - PC3: Third Principal Component (Column 3)
 
 2. AQYModel.mat:
-   - Stores the trained AQY prediction model.
-   - Variable ‘Q’: Matrix (1 row x 49 columns) containing threshold values for categorizing data based on ‘t_std.
+   - Stores the trained AQY prediction model variables
+   - Variable ‘Q’: Matrix (1 row x 49 columns) containing threshold values for categorizing data based on the standardized t_std.
    - Variable ‘trainedModel’: Matrix (48 rows x 6 columns) with slope and intercept information for linear regressions of different ‘t_std’ groups.
      - Columns 1 and 2: Slope and intercept for PC1 regression.
      - Columns 3 and 4: Slope and intercept for PC2 regression.
      - Columns 5 and 6: Slope and intercept for PC3 regression.
 
 3. parameter_example.mat:
-   - Example parameters for AQY prediction.
+   - Example parameters for an AQY prediction.
    - Variable ‘para’: Matrix with 4 columns representing prediction parameters.
      - Column 1: Eabs290-350 (Amount of photon absorbed by CDOM from 290 to 350 nm)(Unit: mol(photon))
      - Column 2: ag350 (CDOM absorption coefficient at 350 nm)(Unit: /m)
      - Column 3: slope275-295 (Spectral slope between 275 and 295 nm)(Unit: /nm)
      - Column 4: Water temperature (Unit: °C)
 
-Code Files
+Matlab scripts files
 1. example.m:
    - Demonstrates how to use the AQY prediction model with example data.
    - Loads the necessary data files and applies the ‘predict’ function to compute AQY predictions.
