@@ -1,0 +1,37 @@
+{
+    "creators": [
+        {
+            "orcid": "0000-0002-9000-312X",
+            "affiliation": "Boston University",
+            "name": "Zhu, Xiaohui"
+        },
+        {
+            "orcid": "0000-0002-1099-5764",
+            "affiliation": "Boston University",
+            "name": "Fichot, Cedric G."
+        },
+    ],
+
+    "license": "Apache-2.0",
+
+    "title": "The apparent quantum yield matrix (AQY-M) of CDOM photobleaching in estuarine, coastal, and oceanic surface waters",
+
+    "related_identifiers": [
+        {
+            "scheme": "doi",
+            "identifier": "10.1016/j.scitotenv.2023.168670",
+            "relation": "isDocumentedBy",
+            "resource_type": "publication-article"
+        }
+    ],
+
+    "keywords": ["CDOM", "CDOM photobleaching", "AQY", "Apparent Quantum Yield"],
+
+    "grants": [
+        {"id": "80NSSC18K0344"},
+        {"id": "80NSSC20K1648"},
+        {"id": "NNH17ZDA001N-EVS3"},
+        {"id": "OCE-2224608"},
+        {"id": "18FARIMA20"}
+    ]
+}
