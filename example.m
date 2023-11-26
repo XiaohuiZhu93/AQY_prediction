@@ -23,8 +23,8 @@ load('AQYModel.mat');
 % - Columns 5 and 6: Slope and intercept for PC3 linear regression.
 
 
-% Load prediction parameters example
-load('parameter_example.mat'); % Includes variable 'para' with 4 columns:
+% Load example parameters for AQY-M prediction
+load('input_variables.mat'); % Includes variable 'para' with 4 columns:
 % 1st column: Eabs290-350
 % 2nd column: ag350
 % 3rd column: slope275-295
@@ -34,17 +34,17 @@ load('parameter_example.mat'); % Includes variable 'para' with 4 columns:
 AQY_Comp = predict(para, trainedModel, Q);
 
 % Initialize a cell array to store predicted AQY for each parameter set
-AQY = cell(1, length(para));
+AQY_M = cell(1, length(para));
 
 % Loop through each parameter set to compute the predicted AQY
 for i = 1:length(para)
     % Calculate the predicted AQY using the weighted sum of PCs and predicted scores
-    AQY_temp = PC1(:) .* AQY_Comp(i,1) + PC2(:) .* AQY_Comp(i,2) + PC3(:) .* AQY_Comp(i,3);
+    AQY_M_temp = PC1(:) .* AQY_Comp(i,1) + PC2(:) .* AQY_Comp(i,2) + PC3(:) .* AQY_Comp(i,3);
     
     % Reshape the predicted AQY to its original dimensions
     % Rows: Excitation wavelength (290-490nm), Columns: Response wavelength (280-700nm)
-    AQY_temp = reshape(AQY_temp, [201, 421]);
-    AQY{1,i} = AQY_temp;
+    AQY_M_temp = reshape(AQY_M_temp, [201, 421]);
+    AQY_M{1,i} = AQY_M_temp;
 end
 
 % Define the 'predict' function
